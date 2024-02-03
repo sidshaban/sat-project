@@ -23,5 +23,5 @@ jobs:
           script: |
             cd /var/www/html  #Adjust path to your web root
             sudo rm -rf *  # Optional: Delete existing files (use with caution)
-            sudo git clone git@github.com:sidshaban/sat-project.git
+            scp -r sidshaban/sat-project .  # Replace with actual source directory
             sudo systemctl restart apache2  # Restart Apache to apply changes
