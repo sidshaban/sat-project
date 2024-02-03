@@ -7,8 +7,8 @@ jobs:
     runs-on: ubuntu-latest  # Use a Linux-based runner
 
     steps:
-      - name: Checkout Repository
-      - uses: actions/checkout@v3  # Checkout the code
+      -  name: Checkout Repository
+      #- uses: actions/checkout@v3  # Checkout the code
       #- name: Install dependencies (if any)
        # run: npm install  # Example for installing npm packages
       #- name: Lint HTML and CSS (optional)
