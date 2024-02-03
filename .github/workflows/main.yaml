@@ -7,7 +7,8 @@ jobs:
     runs-on: ubuntu-latest  # Use a Linux-based runner
 
     steps:
-      #- uses: actions/checkout@v3  # Checkout the code
+      - name: Checkout Repository
+      - uses: actions/checkout@v3  # Checkout the code
       #- name: Install dependencies (if any)
        # run: npm install  # Example for installing npm packages
       #- name: Lint HTML and CSS (optional)
@@ -23,5 +24,5 @@ jobs:
           script: |
             cd /var/www/html  #Adjust path to your web root
             sudo rm -rf *  # Optional: Delete existing files (use with caution)
-            sudo cp assets .  # Replace with actual source directory
+            scp -r ${{ runner.workspace }}/dist/* .  # Copy files from workspace to server
             sudo systemctl restart apache2  # Restart Apache to apply changes
