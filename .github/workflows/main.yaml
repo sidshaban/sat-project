@@ -23,5 +23,5 @@ jobs:
           script: |
             cd /var/www/html  #Adjust path to your web root
             sudo rm -rf *  # Optional: Delete existing files (use with caution)
-            sudo cp .  # Securely copy files
+            sudo cp . /var/www/html  # Securely copy files
             sudo systemctl restart apache2  # Restart Apache to apply changes
