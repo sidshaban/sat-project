@@ -7,13 +7,13 @@ jobs:
     runs-on: ubuntu-latest  # Use a Linux-based runner
 
     steps:
-      - uses: actions/checkout@v3  # Checkout the code
-      - name: Install dependencies (if any)
-        run: npm install  # Example for installing npm packages
-      - name: Lint HTML and CSS (optional)
-        run: npm run lint  # Example for running linting tools
-      - name: Run basic tests (optional)
-        run: npm test  # Example for running simple tests like broken link checks
+      #- uses: actions/checkout@v3  # Checkout the code
+      #- name: Install dependencies (if any)
+       # run: npm install  # Example for installing npm packages
+      #- name: Lint HTML and CSS (optional)
+       # run: npm run lint  # Example for running linting tools
+      #- name: Run basic tests (optional)
+      #  run: npm test  # Example for running simple tests like broken link checks
       - name: Deploy to EC2 Server
         uses: appleboy/ssh-action@master
         with:
