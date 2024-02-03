@@ -23,5 +23,4 @@ jobs:
           script: |
             cd /var/www/html  #Adjust path to your web root
             sudo rm -rf *  # Optional: Delete existing files (use with caution)
-            sudo scp -r ${{ runner.workspace }}/dist/* .  # Securely copy files
             sudo systemctl restart apache2  # Restart Apache to apply changes
