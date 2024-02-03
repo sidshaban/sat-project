@@ -22,6 +22,6 @@ jobs:
           key: ${{ secrets.EC2_KEY }}  # Use an SSH key for authentication
           script: |
             cd /var/www/html  #Adjust path to your web root
-            rm -rf *  # Optional: Delete existing files (use with caution)
-            scp -r ${{ runner.workspace }}/dist/* .  # Securely copy files
+            sudo rm -rf *  # Optional: Delete existing files (use with caution)
+            sudo scp -r ${{ runner.workspace }}/dist/* .  # Securely copy files
             sudo systemctl restart apache2  # Restart Apache to apply changes
